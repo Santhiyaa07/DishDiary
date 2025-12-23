@@ -16,9 +16,10 @@ const ForgotPassword = require("./routes/forgotPassword");
 app.use(express.json());
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: ["http://localhost:3000", "https://dish-diary-omega.vercel.app"],
   credentials: true
 }));
+
 
 app.use("/auth", LoginRoute);
 app.use("/auth", RegisterRoute);
